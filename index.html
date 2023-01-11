@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+        // Returns a random integer from 1 to 10;
+        let num = Math.floor(Math.random() * 10) + 1;
+
+        let guess = prompt("guess a number between 1 and 10");
+
+        let gotIt = false;//seeds the loops
+
+        let counter = 0; //wil keep track of how many guesses
+
+        let feedback = ""; //will store feedback for user
+
+        let timeTimes = "times"; //handles the plural of time/times
+
+        while(gotIt == false){
+            counter++; //increment counter
+        if (num == guess){//got it!
+            //alert("Got it!");
+            gotIt = true;//break out the loop
+        }else if(num > guess){//higher!
+            //alert("higher!");
+            guess = prompt("higher");
+        }else{//lower!
+            //alert("lower!");
+            guess = prompt("lower");
+        }
+
+    }
+        //alert("Sorry!  You guessed " + guess + " and the number was " + num);
+
+        if(counter == 1){
+            timeTimes = "time"; //switch to singular
+        }
+        feedback = "Great job! The number was " + num + " and you guessed " + counter + " " + timeTimes;
+
+        alert(feedback);
+	</script>
+
+</body>
+</html>
